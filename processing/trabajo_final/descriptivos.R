@@ -91,3 +91,41 @@ bsjo <- epsoc %>% select(
 )
 
 sjPlot::tab_corr(bsjo, triangle = "lower")
+
+library(corrplot)
+
+cor_bsjo <- cor(bsjo, use = "complete.obs", method = "pearson")
+
+diag(cor_bsjo) = NA 
+
+rownames(cor_bsjo) <- c("A. IGUAL1",
+                        "B. IGUAL2",
+                        "C. IGUAL3",
+                        "D. NEC1",
+                        "E. NEC2",
+                        "F. NEC3",
+                        "G. EQUI1",
+                        "H. EQUI2",
+                        "I. EQUI3",
+                        "J. EQUI4",
+                        "K. EQUI5",
+                        "L. DER1",
+                        "M. DER2",
+                        "N. DER3")
+#set Column names of the matrix
+colnames(cor_bsjo) <-c("(A)", "(B)","(C)","(D)","(E)","(F)","(G)",
+                       "(H)", "(I)","(J)","(K)","(L)", "(M)", "(N)")
+
+testp <- cor.mtest(bsjo, conf.level = 0.95)
+
+#Plot the matrix using corrplot
+corrplot::corrplot(cor_bsjo,
+                   p.mat = testp$p,
+                   method = "color",
+                   addCoef.col = "black",
+                   type = "upper",
+                   tl.col = "black",
+                   col = colorRampPalette(c("#E16462", "white", "#0D0887"))(12),
+                   bg = "white",
+                   na.label = "-")
+

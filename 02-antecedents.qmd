@@ -1,0 +1,8 @@
+---
+author: "Equipo"
+#bibliography: "input/bib/just-ineq-merit.bib"
+csl: "input/bib/apa6.csl"
+---
+
+# Antecedentes
+

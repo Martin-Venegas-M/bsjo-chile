@@ -36,7 +36,7 @@ epsoc <- readRDS("input/data/proc/epsoc_proc.RDS")
 
 # 3. EFA ------------------------------------------------------------------
 
-bsjo <- epsoc %>% rename(
+bsjo <- epsoc %>% select(
   IGUAL1 = bsjo1,
   IGUAL2 = bsjo2,
   IGUAL3 = bsjo3,
@@ -141,7 +141,7 @@ semPaths(mod1_cfa,
          layout="tree2", 
          title = FALSE, # Elimina el título
          rotation = 4,
-         sizeMan=5, sizeLat=15, # Ajusta el tamaño de los nodos
+         sizeMan=6, sizeLat=12, # Ajusta el tamaño de los nodos
          edge.label.cex = 1, # Ajusta el tamaño del texto de las etiquetas de las aristas
          nCharNodes = 0, # Muestra todos los caracteres de los nombres de los nodos
          curvature = 0.5, # Ajusta la curvatura de las aristas
@@ -156,7 +156,7 @@ semPaths(mod2_cfa,
          layout="tree2", 
          title = FALSE, # Elimina el título
          rotation = 4,
-         sizeMan=5, sizeLat=15, # Ajusta el tamaño de los nodos
+         sizeMan=6, sizeLat=12, # Ajusta el tamaño de los nodos
          edge.label.cex = 1, # Ajusta el tamaño del texto de las etiquetas de las aristas
          nCharNodes = 0, # Muestra todos los caracteres de los nombres de los nodos
          curvature = 0.5, # Ajusta la curvatura de las aristas
@@ -171,7 +171,7 @@ semPaths(mod3_cfa,
          layout="tree2", 
          title = FALSE, # Elimina el título
          rotation = 4,
-         sizeMan=5, sizeLat=15, # Ajusta el tamaño de los nodos
+         sizeMan=6, sizeLat=12, # Ajusta el tamaño de los nodos
          edge.label.cex = 1, # Ajusta el tamaño del texto de las etiquetas de las aristas
          nCharNodes = 0, # Muestra todos los caracteres de los nombres de los nodos
          curvature = 0.5, # Ajusta la curvatura de las aristas

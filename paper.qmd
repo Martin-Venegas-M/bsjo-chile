@@ -1,5 +1,5 @@
 ---
-title: "Escala básica de orientaciones hacia la justicia social: Un análisis de su estructura factorial en Chile"
+title: "Escala básica de orientaciones hacia la justicia social: un análisis factorial en Chile"
 format:
   hikmah-pdf: 
     indent: false
@@ -14,7 +14,7 @@ author:
         country: Chile
     attributes:
       corresponding: true
-  - name: Juan Diego García
+  - name: Juan Diego García-Castro
     email: juandiego.garcia@ucr.ac.cr
     orcid: 0000-0002-9662-6547
     affiliations: 
